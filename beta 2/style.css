@@ -1,0 +1,356 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #f39c12;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f39c12;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+body.dark #theme-toggle {
+    background: #444;
+    color: #f39c12;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: #f39c12;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.btn {
+    background: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #d35400;
+}
+
+/* Story Grid */
+.story-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.story-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.story-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #f39c12;
+}
+
+/* Integrated Search Box Styles */
+.nav-search {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.nav-search:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-search {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero-image {
+    background-image: url('/Users/kanavnanda/Downloads/vecteezy_hopscotch-on-playground-background_6351729_969/vecteezy_hopscotch-on-playground-background_6351729.jpg'); /* Replace with the correct path to your image */
+    background-size: cover; /* Ensures the image covers the full section */
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay Text */
+.hero-overlay {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay h1 {
+    font-size: 3rem; /* Adjust as necessary */
+    margin-bottom: 20px;
+}
+
+.hero-overlay .shop-now-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.hero-overlay .shop-now-btn:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-overlay .shop-now-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+.menu-toggle {
+    margin-right: 10px; /* Adds space after menu toggle */
+}
+.logo img {
+    height: 40px; /* Adjust size as needed */
+    width: auto;
+}
+.hero-overlay .hero-logo {
+    max-width: 500px; /* Adjust width as needed */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and button */
+}
+
+.hero-overlay {
+    text-align: right; /* Shift content to the right */
+    padding-right: 10%; /* Add some right padding */
+}
+
+.hero-logo {
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 30px;
+}
+.hero-overlay {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 500px;
+}
+
+.hero-logo {
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+.hero-logo {
+    position: relative; /* Allows for relative positioning */
+    transform: translateY(-66%); /* Move the logo up by 45% of its own height */
+}
+.hero-cta {
+    position: absolute;
+    bottom: 58%; /* Moves the button up by 45% */
+    left: 38%;
+    transform: translateX(-50%);
+}

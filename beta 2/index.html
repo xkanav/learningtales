@@ -1,0 +1,136 @@
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/Users/kanavnanda/Downloads/Screenshot Nov 21 2024 from Remove.bg.png" alt="Learning Tales Logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#features">Features</a></li>
+    </ul>
+    <!-- Integrated Search Box -->
+    <input type="text" id="story-search" class="nav-search" placeholder="Search stories...">
+    <button class="btn login-btn">Login</button>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+    <div class="hero-section">
+        <!-- Background Image -->
+        <div class="hero-image">
+            <!-- Overlay Text -->
+            <div class="hero-overlay">
+                <img src="/Users/kanavnanda/Downloads/Screenshot Nov 21 2024 Remove Background.png" alt="Learning Tales Logo" class="hero-logo">
+                <div class="hero-cta">
+                    <a href="#stories" class="btn">Explore Stories</a>  
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2 style="text-align: center;">About Learning Tales</h2>
+        <p style="text-align: center;">We create engaging, narrative-driven video stories that blend education with entertainment. Each story is designed to encourage curiosity and critical thinking in young minds.</p>    </section>
+
+    <!-- Stories Section with Search -->
+    <section id="stories">
+        <h2 style="text-align: center;">Our Stories</h2>
+        <div class="story-grid">
+            <div class="story-card" data-title="The Curious Bunny">
+                <img src="images/story1.jpg" alt="Story 1">
+                <h3>The Curious Bunny</h3>
+                <p>A delightful tale about a bunny exploring the wonders of nature.</p>
+                <button class="btn video-btn" data-video="videos/story1.mp4">Watch Now</button>
+            </div>
+            <div class="story-card" data-title="The Brave Little Fox">
+                <img src="images/story2.jpg" alt="Story 2">
+                <h3>Leo and the secret of the hidden note</h3>
+                <p>An inspiring story of courage and friendship.</p>
+                <button class="btn video-btn" data-video="videos/story2.mp4">Watch Now</button>
+            </div>
+            <div class="story-card" data-title="The Magical Rainbow">
+                <img src="images/story3.jpg" alt="Story 3">
+                <h3>The Magical Rainbow</h3>
+                <p>Join a colorful adventure filled with learning and magic.</p>
+                <button class="btn video-btn" data-video="videos/story3.mp4">Watch Now</button>
+            </div>
+        </div>
+    </section>
+
+<!-- Features Section -->
+<section id="features">
+    <h2 style="text-align: center;">Why Choose Us?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-brain"></i>
+            <h3>Interactive Storytelling</h3>
+            <p>Engaging narratives that capture young minds</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-video"></i>
+            <h3>High-Quality Videos</h3>
+            <p>Educational content crafted with precision</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-child"></i>
+            <h3>Child-Friendly Design</h3>
+            <p>Learning experiences tailored for young learners</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-star"></i>
+            <h3>Parent-Approved Content</h3>
+            <p>Trusted and vetted educational materials</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Modal for Videos -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video controls id="modal-video"></video>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer style="text-align: center;">
+    <p>&copy; 2024 Learning Tales. All rights reserved.</p>
+    <div>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Learning Tales</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
